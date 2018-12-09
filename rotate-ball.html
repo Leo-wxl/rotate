@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 800px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: rotate3d(1,1,0,-80deg);
+            background-color: rgb(12, 5, 49);
+            animation: zhuan linear 10s infinite;
+            
+        }
+        @keyframes zhuan {
+            0% {
+                transform: rotate3d(1,0,0,-0deg);
+            }
+            100% {
+                transform: rotate3d(1,1,1,-3600deg);
+            }
+        }
+    .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 200px auto;
+    }
+    .ball {
+        position: relative;;
+        width: 200px;
+        height: 200px;
+        border: 2px solid navy;
+        box-shadow: 2px 2px 20px 4px yellow;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    .ball3 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 2px solid rgb(128, 94, 0);
+        box-shadow: 2px 2px 20px 4px rgb(183, 0, 255);
+        border-radius: 50%;
+        margin: 0 auto;
+        transform: rotateY(90deg);
+    }
+    .ball1,
+    .ball2,
+    .ball4,
+    .ball5 {
+        position: absolute;
+        top: 22px;
+        left: 22px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;   
+        border: 2px solid rgb(0, 128, 128);
+        box-shadow: 2px 2px 20px 4px rgb(255, 94, 0);
+    }
+    .ball1 {
+        border: 2px solid rgb(128, 0, 75);
+        transform: translateZ(50px);
+    }
+    .ball2 {
+        border: 2px solid rgb(128, 0, 0);
+        transform: translateZ(-50px)
+    }
+    .ball4 {
+        border: 2px solid rgb(26, 128, 0);
+        transform: translateX(50px) rotateY(90deg);
+    }
+    .ball5 {
+        transform: rotateY(90deg);
+        border: 2px solid rgb(45, 0, 128);
+        transform: translateX(-50px) rotateY(90deg);
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="ball">
+            <div class="ball1"></div>
+            <div class="ball2"></div>
+            <div class="ball3"></div>
+            <div class="ball4"></div>
+            <div class="ball5"></div>
+        </div> 
+    </div>
+</body>
+</html>
